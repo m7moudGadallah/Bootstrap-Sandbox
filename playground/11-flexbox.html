@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BootStrap SandBox | Flexbox</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1 class="mb-5">Flexbox</h1>
+
+    <!-- Basic flex -->
+    <div class="d-flex flex-row text-center bg-danger gap-3">
+      <div class="bg-primary p-3">Item 1 of 5</div>
+      <div class="bg-primary p-3">Item 1 of 5</div>
+      <div class="bg-primary p-3">Item 1 of 5</div>
+      <div class="bg-primary p-3">Item 1 of 5</div>
+      <div class="bg-primary p-3">Item 1 of 5</div>
+    </div>
+
+    <hr class="my-5" />
+
+    <!-- Flex Column -->
+    <div class="d-flex flex-column text-center bg-danger gap-2">
+      <div class="bg-primary p-3">Item 1 of 5</div>
+      <div class="bg-primary p-3">Item 2 of 5</div>
+      <div class="bg-primary p-3">Item 3 of 5</div>
+      <div class="bg-primary p-3">Item 4 of 5</div>
+      <div class="bg-primary p-3">Item 5 of 5</div>
+    </div>
+
+    <hr class="my-5" />
+
+    <!-- Response Flex with Breakpoints-->
+    <div
+      class="d-flex flex-column flex-md-row text-center bg-danger gap-2 gap-md-3"
+    >
+      <div class="bg-primary p-3">Item 1 of 5</div>
+      <div class="bg-primary p-3">Item 2 of 5</div>
+      <div class="bg-primary p-3">Item 3 of 5</div>
+      <div class="bg-primary p-3">Item 4 of 5</div>
+      <div class="bg-primary p-3">Item 5 of 5</div>
+    </div>
+
+    <hr class="my-5" />
+
+    <!-- Flex Wrap -->
+    <div
+      class="container d-flex flex-row flex-wrap gap-3 text-center bg-danger"
+    >
+      <div class="bg-primary p-3">Item 1 of 20</div>
+      <div class="bg-primary p-3">Item 2 of 20</div>
+      <div class="bg-primary p-3">Item 3 of 20</div>
+      <div class="bg-primary p-3">Item 4 of 20</div>
+      <div class="bg-primary p-3">Item 5 of 20</div>
+      <div class="bg-primary p-3">Item 6 of 20</div>
+      <div class="bg-primary p-3">Item 7 of 20</div>
+      <div class="bg-primary p-3">Item 8 of 20</div>
+      <div class="bg-primary p-3">Item 9 of 20</div>
+      <div class="bg-primary p-3">Item 10 of 20</div>
+      <div class="bg-primary p-3">Item 11 of 20</div>
+      <div class="bg-primary p-3">Item 12 of 20</div>
+      <div class="bg-primary p-3">Item 13 of 20</div>
+      <div class="bg-primary p-3">Item 14 of 20</div>
+      <div class="bg-primary p-3">Item 15 of 20</div>
+      <div class="bg-primary p-3">Item 16 of 20</div>
+      <div class="bg-primary p-3">Item 17 of 20</div>
+      <div class="bg-primary p-3">Item 18 of 20</div>
+      <div class="bg-primary p-3">Item 19 of 20</div>
+      <div class="bg-primary p-3">Item 20 of 20</div>
+    </div>
+
+    <hr class="my-5" />
+
+    <!-- Flex Justify Content -->
+    <div
+      class="container d-flex flex-row flex-wrap justify-content-center gap-3 text-center bg-danger"
+    >
+      <div class="bg-primary p-3">Item 1 of 20</div>
+      <div class="bg-primary p-3">Item 2 of 20</div>
+      <div class="bg-primary p-3">Item 3 of 20</div>
+      <div class="bg-primary p-3">Item 4 of 20</div>
+      <div class="bg-primary p-3">Item 5 of 20</div>
+      <div class="bg-primary p-3">Item 6 of 20</div>
+      <div class="bg-primary p-3">Item 7 of 20</div>
+      <div class="bg-primary p-3">Item 8 of 20</div>
+      <div class="bg-primary p-3">Item 9 of 20</div>
+      <div class="bg-primary p-3">Item 10 of 20</div>
+      <div class="bg-primary p-3">Item 11 of 20</div>
+      <div class="bg-primary p-3">Item 12 of 20</div>
+      <div class="bg-primary p-3">Item 13 of 20</div>
+      <div class="bg-primary p-3">Item 14 of 20</div>
+      <div class="bg-primary p-3">Item 15 of 20</div>
+      <div class="bg-primary p-3">Item 16 of 20</div>
+      <div class="bg-primary p-3">Item 17 of 20</div>
+      <div class="bg-primary p-3">Item 18 of 20</div>
+      <div class="bg-primary p-3">Item 19 of 20</div>
+      <div class="bg-primary p-3">Item 20 of 20</div>
+    </div>
+
+    <hr class="my-5" />
+
+    <!-- Flex align-items -->
+    <div
+      class="container d-flex flex-row flex-wrap justify-content-center align-items-center gap-3 text-center bg-danger"
+      style="height: 500px"
+    >
+      <div class="bg-primary p-3">Item 1 of 20</div>
+      <div class="bg-primary p-3">Item 2 of 20</div>
+      <div class="bg-primary p-3">Item 3 of 20</div>
+      <div class="bg-primary p-3">Item 4 of 20</div>
+      <div class="bg-primary p-3">Item 5 of 20</div>
+      <div class="bg-primary p-3">Item 6 of 20</div>
+      <div class="bg-primary p-3">Item 7 of 20</div>
+      <div class="bg-primary p-3">Item 8 of 20</div>
+      <div class="bg-primary p-3">Item 9 of 20</div>
+      <div class="bg-primary p-3">Item 10 of 20</div>
+      <div class="bg-primary p-3">Item 11 of 20</div>
+      <div class="bg-primary p-3">Item 12 of 20</div>
+      <div class="bg-primary p-3">Item 13 of 20</div>
+      <div class="bg-primary p-3">Item 14 of 20</div>
+      <div class="bg-primary p-3">Item 15 of 20</div>
+      <div class="bg-primary p-3">Item 16 of 20</div>
+      <div class="bg-primary p-3">Item 17 of 20</div>
+      <div class="bg-primary p-3">Item 18 of 20</div>
+      <div class="bg-primary p-3">Item 19 of 20</div>
+      <div class="bg-primary p-3">Item 20 of 20</div>
+    </div>
+    <hr class="my-5" />
+
+    <!-- Align Self -->
+    <div class="container d-flex flex-column bg-danger">
+      <div class="bg-primary p-3 align-self-center">Item 1 of 4</div>
+      <div class="bg-primary p-3 align-self-end">Item 2 of 4</div>
+      <div class="bg-primary p-3 align-self-start">Item 3 of 4</div>
+      <div class="bg-primary p-3">Item 4 of 4</div>
+    </div>
+
+    <hr class="my-5" />
+
+    <!-- Flex Grow -->
+    <div class="container d-flex bg-danger">
+      <div class="bg-secondary p-3 flex-grow-1">Item 1 of 4</div>
+      <div class="bg-primary p-3">Item 2 of 4</div>
+      <div class="bg-secondary p-3">Item 3 of 4</div>
+      <div class="bg-primary p-3">Item 4 of 4</div>
+    </div>
+    <hr class="my-5" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
