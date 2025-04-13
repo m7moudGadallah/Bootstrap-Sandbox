@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BootStrap SandBox | Forms Inputs</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* Style the range track */
+      .form-range::-webkit-slider-runnable-track {
+        background-color: var(--bs-dark);
+        height: 0.4rem;
+        border-radius: 0.25rem;
+      }
+
+      .form-range::-moz-range-track {
+        background-color: var(--bs-dark);
+        height: 0.4rem;
+        border-radius: 0.25rem;
+      }
+
+      /* Style the range thumb */
+      .form-range::-webkit-slider-thumb {
+        background-color: var(--bs-primary);
+        border: none;
+      }
+
+      .form-range::-moz-range-thumb {
+        background-color: var(--bs-primary);
+        border: none;
+      }
+    </style>
+    <script>
+      onload = () => {
+        const toggle = document.getElementById("togglePassword");
+        const input = document.getElementById("passwordInput");
+        const icon = document.getElementById("toggleIcon");
+
+        toggle.addEventListener("click", () => {
+          const isPassword = input.type === "password";
+          input.type = isPassword ? "text" : "password";
+          icon.classList.toggle("bi-eye");
+          icon.classList.toggle("bi-eye-slash");
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <h1 class="mb-5">Forms Inputs</h1>
+
+      <!-- Create Basic Form -->
+      <div class="container">
+        <h2 class="text-center mb-4">Simple Login Form</h2>
+        <form action="#">
+          <div
+            class="vstack gap-4 offset-4 col-4 bg-light-subtle p-5 border rounded-2 shadow-lg"
+          >
+            <div>
+              <label for="">Email Address</label>
+              <input type="email" class="form-control" />
+            </div>
+            <div>
+              <label for="">Password</label>
+              <input type="password" class="form-control" />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="rememberMeCheck"
+              />
+              <label for="rememberMeCheck" class="form-check-label"
+                >Remember me</label
+              >
+            </div>
+            <div>
+              <input
+                type="submit"
+                value="Login"
+                class="form-control btn btn-primary"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <hr class="my-5" />
+
+      <!-- Form Fields -->
+      <div class="container">
+        <div
+          class="vstack gap-4 offset-4 col-4 bg-light-subtle p-4 rounded rounded-1 shadow-lg"
+        >
+          <!-- Select Fields -->
+          <div>
+            <select name="" id="" class="form-select">
+              <option value="">Best Time to call</option>
+              <option value="morning">Morning</option>
+              <option value="afternoon">Afternoon</option>
+              <option value="evening">Evening</option>
+            </select>
+          </div>
+
+          <!-- Text Area -->
+          <div>
+            <textarea
+              name=""
+              id=""
+              class="form-control"
+              placeholder="Write your message"
+            ></textarea>
+          </div>
+
+          <!-- Switch -->
+          <div class="form-check form-switch">
+            <input type="checkbox" class="form-check-input" />
+          </div>
+
+          <!-- Inline Checkboxes -->
+          <div>
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="check-input" id="check1" />
+              <label for="check1" class="check-label">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="check-input" id="check2" />
+              <label for="check2" class="check-label">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="check-input" id="check3" />
+              <label for="check3" class="check-label">3</label>
+            </div>
+          </div>
+
+          <!-- Toggle Button -->
+          <div>
+            <input type="checkbox" class="btn-check" id="btnCheck" />
+            <label for="btnCheck" class="btn btn-danger">Button Toggle</label>
+          </div>
+
+          <!-- Range -->
+          <div>
+            <label for="rangInp" class="form-label"></label>
+            <input type="range" class="form-range" id="rangInp" />
+          </div>
+
+          <!-- Range with steps -->
+          <div>
+            <label for="rangInp2" class="form-label"></label>
+            <input
+              type="range"
+              class="form-range"
+              id="rangInp2"
+              min="10"
+              step="10"
+              max="100"
+            />
+          </div>
+
+          <!-- Input Group -->
+          <div class="vstack gap-2">
+            <div class="input-group">
+              <span class="input-group-text">@</span>
+              <input type="email" name="" id="" class="form-control" />
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control" />
+              <input type="submit" class="btn btn-outline-secondary" />
+            </div>
+            <div class="input-group">
+              <input type="password" class="form-control" id="passwordInput" />
+              <span class="input-group-text" id="togglePassword" role="button">
+                <i class="bi bi-eye-slash" id="toggleIcon"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-5" />
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
