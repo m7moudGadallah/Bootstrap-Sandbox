@@ -1,0 +1,21 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "scripts": {
+    "css:clean": "rimraf css ",
+    "scss:watch": "npm run css:clean && sass scss/style.scss:css/style.css --watch --style=expanded",
+    "scss:build": "npm run css:clean && sass scss/style.scss:css/style.css --style=compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "bootstrap": "^5.3.5",
+    "rimraf": "^6.0.1",
+    "sass": "^1.86.3"
+  },
+  "dependencies": {
+    "starter": "file:"
+  }
+}
