@@ -1,1 +1,1 @@
-import './bootstrap.bundle';
+import './bootstrap.bundle.js';
