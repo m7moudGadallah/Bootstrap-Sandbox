@@ -1,22 +1,30 @@
 import './bootstrap.bundle.js';
-import { users } from './users.js';
 import { userCardComponent } from './user-card.component.js';
+import { users } from './users.data.js';
 
-// Selecting Elements
-const themeBtns = document.querySelectorAll('.theme-btn');
-const userCardsContainer = document.getElementById('usersContainer');
-
-// Dark Mode Handling
-themeBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const theme = btn.dataset.theme;
-    themeBtns.forEach(btn => btn.classList.remove('active'));
-    btn.classList.add('active');
-    document.documentElement.setAttribute('data-bs-theme', theme);
+// Handling Themes
+var theme = localStorage.getItem('theme') ?? 'dark';
+const themeBtnGroup = document.querySelector('#themeBtnGroup');
+document.documentElement.setAttribute('data-bs-theme', theme);
+Array.from(themeBtnGroup.children).forEach(btn => {
+  btn.addEventListener('click', e => {
+    const btnTheme = btn.dataset.theme;
+    if (btnTheme == 'dark' || btnTheme == 'light') {
+      theme = btnTheme;
+      localStorage.setItem('theme', theme);
+      document.documentElement.setAttribute('data-bs-theme', theme);
+    }
   });
 });
 
-// Load users
-userCardsContainer.innerHTML = users
+// Enable Tooltips
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]'
+);
+const tooltipList = [...tooltipTriggerList].map(
+  tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl)
+);
+
+document.getElementById('userCardsContainer').innerHTML = users
   .map(user => userCardComponent(user))
   .join('');

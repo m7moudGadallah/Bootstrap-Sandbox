@@ -15,5 +15,6 @@
     "csharp": false,
     "c": false,
     "pseudo": false
-  }
+  },
+  "liveServer.settings.port": 5501
 }
