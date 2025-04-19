@@ -1,0 +1,28 @@
+.navbar-nav .btn-outline-light:hover {
+  color: var(--bs-dark);
+}
+
+.header {
+  background: url("../images/header-background.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.lh-md {
+  line-height: 1.7;
+}
+
+.navbar {
+  transition: all 0.5s ease-in-out;
+}
+
+.sticky-nav {
+  opacity: 0.9;
+  box-shadow: 0 0 1.5rem var(--bs-dark);
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    background-color: var(--bs-dark);
+    opacity: 0.95;
+  }
+}
